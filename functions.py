@@ -30,6 +30,7 @@ def summarize(year1: int, year2: int):
     start_pop = year1[0].pop
     end_pop   = year2[0].pop
     total_change = end_pop - start_pop
+    percent_change=(end_pop - start_pop)/start_pop*100
 
     # return (
     #     "The biggest fish population was {} in {}\n"
@@ -42,9 +43,12 @@ def summarize(year1: int, year2: int):
     # )
 
     return {
-        "highest": {"year": high_fish.year, "population": high_fish.pop},
-        "lowest": {"year": low_fish.year, "population": low_fish.pop},
-        "total_change": total_change
+        "highest": {"year": f"Largest Population Year: {high_fish.year}", "population": f"Largest Population: {high_fish.pop}"},
+        "lowest": {"year": f"Smallest Population Year: {low_fish.year}", "population": f"Smallest Population: {low_fish.pop}"},
+        "total_change": f"Total Change: {total_change}",
+        "percent_change": f"Percent Change: {percent_change}"
     }
 
 print(summarize(1937,1942)['highest']['population'])
+print(summarize(1937,1942)['percent_change'])
+print(summarize(1937,1942))
