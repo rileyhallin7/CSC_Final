@@ -50,4 +50,3 @@ def summarize(year1: int, year2: int):
 
 print(summarize(1937,1942))
 print(summarize(1937,1942)['percent_change'])
-print(summarize(1937,1942))
