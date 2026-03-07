@@ -8,7 +8,7 @@ def summarize(year1: int, year2: int):
         return "year 1 must be less than year 2"
 
     # collect Fish in the time period
-    period = [f for f in Convert.fish_list if f.year]
+    period = [f for f in Convert.fish_list if year1 <= f.year <= year2]
 
     if not period:
         return "no data found between given years"
@@ -18,17 +18,16 @@ def summarize(year1: int, year2: int):
     low_fish  = min(period)
 
     # total change from year1 to year2:
-    # if there are duplicates for a year, take the last one in the list
-    year1 = [f for f in Convert.fish_list if f.year == year1]
-    year2   = [f for f in Convert.fish_list if f.year == year2]
+    start = [f for f in Convert.fish_list if f.year == year1]
+    end   = [f for f in Convert.fish_list if f.year == year2]
 
-    if not year1:
+    if not start:
         return "no data found at year1"
-    if not year2:
+    if not end:
         return "no data found at year2"
 
-    start_pop = year1[0].pop
-    end_pop   = year2[0].pop
+    start_pop = start[0].pop
+    end_pop   = end[0].pop
     total_change = end_pop - start_pop
     percent_change=(end_pop - start_pop)/start_pop*100
 
@@ -49,6 +48,6 @@ def summarize(year1: int, year2: int):
         "percent_change": f"Percent Change: {percent_change}"
     }
 
-print(summarize(1937,1942)['highest']['population'])
+print(summarize(1937,1942))
 print(summarize(1937,1942)['percent_change'])
 print(summarize(1937,1942))
