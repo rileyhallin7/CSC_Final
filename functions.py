@@ -48,5 +48,7 @@ def summarize(year1: int, year2: int):
         "percent_change": f"Percent Change: {percent_change}"
     }
 
-print(summarize(1937,1942))
-print(summarize(1937,1942)['percent_change'])
+if __name__ == "__main__":
+    print(summarize(1960,1962))
+    print(summarize(1937,1942))
+    print(summarize(1937,1942)['percent_change'])
