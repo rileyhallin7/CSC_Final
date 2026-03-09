@@ -48,6 +48,7 @@ def main() -> None:
                     "\nThe biggest fish population was {} in {}\n"
                     "The smallest fish population was {} in {}\n"
                     "The total change of Fish during those 2 time periods is {}\n"
+                    "The total percent change of Fish during those 2 time periods is {}\n"
                     .format(
                         result["highest_population"], result["highest_year"],
                         result["lowest_population"], result["lowest_year"],
