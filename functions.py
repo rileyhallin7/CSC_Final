@@ -42,13 +42,14 @@ def summarize(year1: int, year2: int):
     # )
 
     return {
-        "highest": {"year": f"Largest Population Year: {high_fish.year}", "population": f"Largest Population: {high_fish.pop}"},
-        "lowest": {"year": f"Smallest Population Year: {low_fish.year}", "population": f"Smallest Population: {low_fish.pop}"},
-        "total_change": f"Total Change: {total_change}",
-        "percent_change": f"Percent Change: {percent_change}"
+        "highest_year": high_fish.year,
+        "highest_population": high_fish.pop,
+        "lowest_year": low_fish.year,
+        "lowest_population": low_fish.pop,
+        "total_change": total_change,
+        "percent_change": percent_change
     }
 
-if __name__ == "__main__":
-    print(summarize(1960,1962))
-    print(summarize(1937,1942))
-    print(summarize(1937,1942)['percent_change'])
+print(summarize(1937,1942))
+#print(summarize(1937,1942)['percent_change'])
+#print(summarize(1937,1942))
