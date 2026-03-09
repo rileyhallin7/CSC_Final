@@ -13,11 +13,13 @@ def prompt_int(message: str) -> int:
         except ValueError:
             print("Please enter a valid integer.")
 
+#main menu
 def menu() -> None:
     print("\nActions:")
     print("  1 = summarize  - summarizes details within the given data range")
     print("  2 = quit  ")
 
+#menu logic
 def main() -> None:
     while True:
         menu()
