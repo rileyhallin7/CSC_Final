@@ -5,9 +5,9 @@ from Class import Fish
 from functions import summarize
 
 # returns input as int
-def prompt_int(message: str) -> int:
+def prompt_int(_input: str) -> int:
     while True:
-        s = input(message).strip()
+        s = input(_input)
         try:
             return int(s)
         except ValueError:
