@@ -2,7 +2,6 @@ class Fish:
     # Initialize a new Fish object.
     def __init__(self, year: int, population: int):
         self.year = year
-        #self.name = name
         self.pop = population
 
     # Provide a developer-friendly string representation of the object.
