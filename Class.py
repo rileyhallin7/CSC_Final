@@ -10,6 +10,7 @@ class Fish:
     def __repr__(self):
         return "The Population at year {}, is {}".format(self.year, self.pop)
 
+    #allows for comparison of fish object
     def __eq__(self, other):
         return (self is other or
                 type(other) == Fish and
@@ -17,6 +18,6 @@ class Fish:
                # self.name == other.name and
                 self.pop == other.pop)
 
-    # allows comparison of fish object
+    # allows comparison of population
     def __lt__(self, other):
         return self.pop < other.pop
