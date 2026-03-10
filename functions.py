@@ -1,7 +1,6 @@
 import Convert
 
 # This function when given the input of 2 years will return the summary of data between the 2 time periods
-
 def summarize(year1: int, year2: int):
     # ensure year1 <= year2
     if year1 > year2:
